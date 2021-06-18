@@ -6,7 +6,7 @@ import (
 )
 
 var newuserCmd = &cobra.Command{
-	Use:   "newuser",
+	Use:   "newUser",
 	Short: "Create a new user",
 	Long:  `Add a new user in users list`,
 	Run: func(cmd *cobra.Command, args []string) {
@@ -18,6 +18,6 @@ var newuserCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(newuserCmd)
-	newuserCmd.Flags().String("name", "", "User name")
-	newuserCmd.Flags().String("email", "", "User email")
+	newuserCmd.Flags().String("name", "user", "User name")
+	newuserCmd.Flags().String("email", "user@email.com.br", "User email")
 }
